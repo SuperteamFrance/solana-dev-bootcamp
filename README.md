@@ -1,6 +1,6 @@
-# 🎓 Solana School Roadshow
+# 🎓 Solana Dev Bootcamp Series
 
-Bienvenue dans le programme Solana School Roadshow ! Cette série d'ateliers vous guidera à travers le développement sur Solana, en commençant par les bases jusqu'aux concepts plus avancés.
+Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers vous guidera à travers le développement sur Solana, en commençant par les bases jusqu'aux concepts plus avancés.
 
 ## 📚 Programme des Ateliers
 
