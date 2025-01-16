@@ -5,7 +5,6 @@ Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers
 ## 📚 Programme des Ateliers
 
 ### Atelier 1 : Introduction à Rust
-
 - Bases de la programmation Rust
 - Ownership et Borrowing
 - Structures et Traits
@@ -13,7 +12,6 @@ Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers
 - Tests unitaires en Rust
 
 ### Atelier 2 : Smart Contracts Solana
-
 - Architecture de Solana
 - Anatomie d'un programme Solana
 - Comptes et stockage de données
@@ -45,6 +43,11 @@ Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers
 - Déploiement en production
 - Blinks
 - Solana Agent Kit
+
+### Inscription Luma
+- [Session 1](https://lu.ma/k6s9nhp2?tk=j91uYW)
+- [Session 2](https://lu.ma/vqlcs8ij?tk=IMPdXg)
+- [Session 3](https://lu.ma/pmsyz6pr?tk=QxHw6E)
 
 ## 🛠 Prérequis
 
