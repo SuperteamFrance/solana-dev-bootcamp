@@ -12,5 +12,5 @@ fn main() {
         // TODO: Ajouter le champ mode
     };
 
-    println!("Trip to {:?} using {:?}", trip.destination, trip.mode);
+    println!("Trip to {} using {:?}", trip.destination, trip.mode);
 }
