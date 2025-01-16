@@ -61,7 +61,7 @@ Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers
 ## 📖 Ressources Utiles
 
 ### Documentation Officielle
-
+- [Installer les tools devs Solana](https://solana.com/docs/intro/installation)
 - [Le Livre Rust](https://doc.rust-lang.org/book/)
 - [Documentation Solana](https://docs.solana.com/)
 - [Livre Solana Cookbook](https://solanacookbook.com/)
