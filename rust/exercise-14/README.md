@@ -6,7 +6,10 @@ En Rust, un **test unitaire** consiste à vérifier qu’une fonction ou un morc
 
 - On place le code de test dans un module annoté `#[cfg(test)]`.
 - Chaque test est une fonction annotée `#[test]`.
-- On utilise généralement `assert_eq!`, `assert_ne!` ou `assert!` pour vérifier les résultats.
+- On utilise généralement `assert_eq!(expr1, expr2)`, `assert_ne!(expr1, expr2)` ou `assert!(expr)` pour vérifier les résultats.
+	- `assert!(expr)` permet de verifier si l'expression est `true`
+	- `assert_eq!(expr1, expr2)` permet de verifier si les deux expressions sont égales.
+	- `assert_ne!(expr1, expr2)` permet de verifier si les deux expressions sont inégales.
 
 Pour exécuter tous les tests d’un projet :
 
