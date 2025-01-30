@@ -42,3 +42,10 @@ Définir l'URL locale :
 ```sh
 solana config set --url localhost
 ```
+
+
+## 📜 Théorie Accounts & PDA
+
+![Slide1](slide1.PNG)
+![Slide2](slide2.PNG)
+![Slide3](slide3.PNG)
