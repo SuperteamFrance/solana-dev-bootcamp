@@ -68,6 +68,7 @@ Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers
 - [Livre Solana Cookbook](https://solanacookbook.com/)
 - [Solana Program Examples](https://github.com/solana-developers/program-examples)
 - [Documentation Anchor](https://www.anchor-lang.com/)
+- [13 projects Github + Vidéos accompagement](https://github.com/solana-developers/developer-bootcamp-2024)
 
 ### Outils de Développement
 
