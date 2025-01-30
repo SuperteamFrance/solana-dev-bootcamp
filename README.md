@@ -48,6 +48,7 @@ Bienvenue dans le programme Solana Dev Bootcamp Series ! Cette série d'ateliers
 - [Session 1](https://lu.ma/k6s9nhp2?tk=j91uYW)
 - [Session 2](https://lu.ma/vqlcs8ij?tk=IMPdXg)
 - [Session 3](https://lu.ma/pmsyz6pr?tk=QxHw6E)
+- [Session 4](https://lu.ma/rx8qqmft)
 
 ## 🛠 Prérequis
 
