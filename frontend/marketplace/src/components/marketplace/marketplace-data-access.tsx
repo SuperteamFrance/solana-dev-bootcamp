@@ -38,6 +38,21 @@ export function useMarketplaceProgram() {
       takerTokenMint: PublicKey; 
     }) => {
       // TODO
+      if(!wallet.publicKey) return;
+
+      const [escrowPda, escrowBump] = await anchor.web3.PublicKey.findProgramAddress(
+        [Buffer.from("escrow"), wallet.publicKey.toBuffer()],
+        program.programId
+      );
+  
+      await program.methods
+        .initializeEscrow(new anchor.BN(makerAmount), new anchor.BN(takerAmount), takerTokenMint)
+        .accounts({
+          escrowAccount: escrowPda,
+          maker: wallet.publicKey,
+          systemProgram: SystemProgram.programId,
+        })
+        .rpc();
     },
     onSuccess: (signature: any) => {
       transactionToast(signature)
@@ -70,8 +85,28 @@ export function useMarketplaceProgramAccount({ account }: { account: PublicKey }
   const acceptEscrow = useMutation({
     mutationKey: ['marketplace', 'accept', { cluster, account }],
     mutationFn: async () => {
-
       // TODO
+      console.log("test1");
+      if(!wallet.publicKey) return;
+      console.log("test2");
+
+      const maker = accountQuery.data?.maker;
+      const tokenAddress = accountQuery.data?.takerTokenMint;
+
+      const takerTokenAccount = await getAssociatedTokenAddress(tokenAddress, wallet.publicKey, false)
+      const makerTokenAccount = await getAssociatedTokenAddress(tokenAddress, maker, false)
+
+      return await program.methods.acceptEscrow().accounts({
+        escrowAccount: account,
+        taker: wallet.publicKey,
+        maker: maker,
+        takerTokenAccount: takerTokenAccount,
+        makerTokenAccount: makerTokenAccount,
+        takerTokenMint: tokenAddress,
+        tokenProgram: anchor.utils.token.TOKEN_PROGRAM_ID,
+        associatedTokenProgram: anchor.utils.token.ASSOCIATED_PROGRAM_ID,
+        systemProgram: SystemProgram.programId,
+      }).rpc();
     },
     onSuccess: (tx: any) => {
       transactionToast(tx)
