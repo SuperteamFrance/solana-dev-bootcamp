@@ -2,8 +2,8 @@
 import * as anchor from "@coral-xyz/anchor";
 import { getMarketplaceProgram, getMarketplaceProgramId } from '@project/anchor'
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
-import { Cluster, Keypair, PublicKey, SystemProgram } from '@solana/web3.js'
-import {getAssociatedTokenAddress} from "@solana/spl-token";
+import { Connection, Keypair, PublicKey, Transaction, sendAndConfirmTransaction, Cluster, SystemProgram } from '@solana/web3.js';
+import { getAssociatedTokenAddress, createTransferInstruction } from '@solana/spl-token';
 import { useMutation, useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
 import toast from 'react-hot-toast'

@@ -32,6 +32,7 @@ export function MarketplaceCreate() {
 
   return (
     <div className="card bg-base-200 shadow-lg p-6 space-y-4">
+      <button onClick={() => window.open('https://spl-token-faucet.com/?token-name=USDC-Dev')}>Get USDC Faucet here</button>
       <h2 className="text-2xl font-bold text-primary">Create a Trade</h2>
       
       <div className="form-control">
