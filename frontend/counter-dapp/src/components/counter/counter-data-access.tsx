@@ -20,7 +20,7 @@ export function useCounterdappProgram() {
 
   const accounts = useQuery({
     queryKey: ['counter', 'all', { cluster }],
-    queryFn: () => program.account.counter.all(),
+    queryFn: () => program.account.counterdapp.all(),
   })
 
   const getProgramAccount = useQuery({
@@ -55,7 +55,7 @@ export function useCounterdappProgramAccount({ account }: { account: PublicKey }
 
   const accountQuery = useQuery({
     queryKey: ['counter', 'fetch', { cluster, account }],
-    queryFn: () => program.account.counter.fetch(account),
+    queryFn: () => program.account.counterdapp.fetch(account),
   })
 
   const closeMutation = useMutation({

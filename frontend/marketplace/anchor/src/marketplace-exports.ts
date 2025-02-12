@@ -21,7 +21,7 @@ export function getMarketplaceProgramId(cluster: Cluster) {
     case 'devnet':
     case 'testnet':
       // This is the program ID for the Marketplace program on devnet and testnet.
-      return new PublicKey('8MxUVtmrx8QUCAyWW9BNmkFvxwPxJg2x416DkX7rBoGB')
+      return new PublicKey('86pLXiqvd8h51GLDsd9FCGJ5DLxuJZcSYarq2MRWPp6W')
     case 'mainnet-beta':
     default:
       return MARKETPLACE_PROGRAM_ID

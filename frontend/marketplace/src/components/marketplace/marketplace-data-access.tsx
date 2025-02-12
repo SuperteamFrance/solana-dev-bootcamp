@@ -37,22 +37,7 @@ export function useMarketplaceProgram() {
       takerAmount: number; 
       takerTokenMint: PublicKey; 
     }) => {
-      if(!wallet.publicKey) return;
-
-      const [escrowPda, escrowBump] = await anchor.web3.PublicKey.findProgramAddress(
-        [Buffer.from("escrow"), wallet.publicKey.toBuffer()],
-        program.programId
-      );
-  
-      return await program.methods
-        .initializeEscrow(new anchor.BN(makerAmount), new anchor.BN(takerAmount), takerTokenMint)
-        .accounts({
-          // @ts-ignore
-          escrowAccount: escrowPda,
-          maker: wallet.publicKey,
-          systemProgram: SystemProgram.programId,
-        })
-        .rpc();
+      // TODO
     },
     onSuccess: (signature: any) => {
       transactionToast(signature)
@@ -86,41 +71,7 @@ export function useMarketplaceProgramAccount({ account }: { account: PublicKey }
     mutationKey: ['marketplace', 'accept', { cluster, account }],
     mutationFn: async () => {
 
-      if(!wallet.publicKey) return;
-
-      if(!accountQuery.data?.maker) return;
-      if(!accountQuery.data?.takerTokenMint) return;
-
-      const makerPubkey = accountQuery.data?.maker;
-      const takerTokenMint = accountQuery.data?.takerTokenMint;
-
-      const makerTokenAta = await getAssociatedTokenAddress(
-        takerTokenMint,
-        makerPubkey,
-        false
-      );
-      
-      const takerTokenAta = await getAssociatedTokenAddress(
-        takerTokenMint,
-        wallet.publicKey,
-        false
-      );
-
-      return await program.methods
-      .acceptEscrow()
-      .accounts({
-        // @ts-ignore
-        escrowAccount: account,
-        taker: wallet.publicKey,
-        maker: makerPubkey,
-        takerTokenAccount: takerTokenAta,
-        makerTokenAccount: makerTokenAta,
-        takerTokenMint: takerTokenMint,
-        tokenProgram: anchor.utils.token.TOKEN_PROGRAM_ID,
-        associatedTokenProgram: anchor.utils.token.ASSOCIATED_PROGRAM_ID,
-        systemProgram: SystemProgram.programId,
-      })
-      .rpc();
+      // TODO
     },
     onSuccess: (tx: any) => {
       transactionToast(tx)
